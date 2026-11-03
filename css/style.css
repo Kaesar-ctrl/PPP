@@ -1,0 +1,104 @@
+:root{
+    --color-general: #383838;
+    --color-titulos: #222;
+    --fondo-negro: #262728;
+    --fondo-rosado: #fee9da;
+    --color-gris: #c6c6c6;
+    --color-blanco: #fff;
+    --color-parrafo: #777;
+}
+html{ scroll-behavior: smooth; }
+body{ font-family: 'Didact Gothic', sans-serif; font-size: 16px; color: var(--color-general); }
+h1,h2,h3,.btn,.enlace-linea{ font-family: 'Poppins', sans-serif; }
+h1,h2{ color: var(--color-titulos); font-weight: 700; text-transform: uppercase; }
+h1{ font-size: 52px; line-height: 1.35; margin-bottom: 25px; }
+h2{ font-size: 40px; line-height: 1.3; margin-bottom: 20px; }
+p{ color: var(--color-parrafo); line-height: 1.85; margin-bottom: 28px; }
+a{ color: inherit; text-decoration: none; }
+a:hover{ color: inherit; }
+img{ max-width: 100%; }
+.container{ max-width: 1184px; }
+.section{ padding: 90px 0; }
+header{ position: absolute; top: 0; left: 0; width: 100%; padding: 16px 30px; display: flex; align-items: center; justify-content: space-between; z-index: 2; }
+.logo{ width: 95px; height: auto; }
+.btn-oscuro{ background-color: var(--color-titulos); color: var(--color-blanco); border-radius: 0; border: 0; padding: 15px 22px; font-size: 12px; font-weight: 600; text-transform: uppercase; }
+.btn-oscuro:hover,.btn-oscuro:focus-visible{ background-color: var(--color-general); color: var(--color-blanco); }
+header .btn-oscuro{ background-color: #000; }
+.enlace-linea{ display: inline-flex; align-items: center; gap: 18px; margin-top: 8px; font-size: 12px; letter-spacing: .5px; font-weight: 600; text-transform: uppercase; }
+.enlace-linea::before{ content: ''; width: 24px; height: 2px; background-color: currentColor; }
+.enlace-linea:hover{ opacity: .65; }
+#hero{ background-color: var(--fondo-negro); }
+#hero .hero-texto{ width: 51.8%; }
+#hero .hero-imagen{ width: 48.2%; }
+.hero-texto{ min-height: 658px; padding: 120px 40px 100px; display: flex; align-items: center; }
+.hero-texto>div{ max-width: 575px; }
+.hero-texto h1{ color: var(--color-blanco); }
+.hero-texto p{ color: var(--color-gris); }
+.hero-texto .enlace-linea{ color: var(--fondo-rosado); }
+.hero-imagen img{ width: 100%; height: 100%; object-fit: cover; }
+#trendy{ padding: 90px 0 120px; }
+#trendy .row{ --bs-gutter-x: 50px; }
+.trendy-texto{ padding-right: 55px; }
+#trendy img{ width: 100%; }
+#services{ padding: 60px 0 128px; }
+.grupo-titulo{ margin-bottom: 50px; }
+.grupo-titulo h2{ margin-bottom: 12px; }
+.servicios-fila{ --bs-gutter-x: 40px; --bs-gutter-y: 40px; }
+.servicio{ position: relative; height: 300px; overflow: hidden; display: grid; place-items: center; }
+.servicio img{ position: absolute; width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+.servicio::after{ content: ''; position: absolute; inset: 0; background-color: rgba(0,0,0,.43); }
+.servicio h3{ position: relative; z-index: 1; color: var(--color-blanco); font-size: 22px; font-weight: 600; margin: 0; text-align: center; }
+.servicio:hover img{ transform: scale(1.05); }
+#products{ background-color: var(--fondo-rosado); }
+.producto-imagen{ padding: 30px 25px 0 7.5%; }
+.producto-imagen img{ display: block; width: 100%; }
+.producto-texto{ padding: 70px 7.5% 70px 5%; }
+.testimonio,.testimonio-imagen{ height: 485px; }
+.testimonio{ display: grid; place-items: center; padding: 50px; text-align: center; }
+.comillas{ font-family: Georgia, serif; font-size: 55px; line-height: 1; }
+.testimonio blockquote{ font-size: 22px; line-height: 1.6; color: var(--color-parrafo); margin: 0 0 25px; }
+.testimonio h3{ font-family: 'Didact Gothic', sans-serif; font-size: 20px; margin-bottom: 8px; }
+.testimonio p{ font-family: 'Poppins', sans-serif; color: var(--color-gris); text-transform: uppercase; font-size: 11px; letter-spacing: .5px; margin: 0; }
+.testimonio-imagen img{ display: block; width: 100%; height: 100%; object-fit: cover; }
+#contact{ padding: 95px 0 30px; border-top: 1px solid #eee; }
+#contact .row{ --bs-gutter-x: 50px; }
+.contacto-datos{ padding-left: 65px; }
+.dato{ display: flex; align-items: flex-start; gap: 20px; margin-bottom: 40px; }
+.icono-contacto{ flex-shrink: 0; background-color: var(--fondo-negro); color: var(--color-blanco); border-radius: 50%; width: 45px; height: 45px; display: grid; place-items: center; font-size: 18px; }
+.dato h3{ font-family: 'Didact Gothic', sans-serif; text-transform: uppercase; font-size: 13px; margin-bottom: 5px; }
+.dato p,.dato a{ font-size: 16px; color: var(--color-parrafo); margin: 0; }
+input,textarea{ width: 100%; border: 0; border-bottom: 1px solid #ddd; border-radius: 0; padding: 12px 8px; background-color: transparent; font: inherit; font-size: 14px; color: var(--color-general); }
+textarea{ height: 280px; margin: 25px 0 20px; resize: vertical; }
+input:focus,textarea:focus{ outline: 2px solid var(--color-general); outline-offset: 3px; }
+#contact form .row{ --bs-gutter-x: 25px; }
+#contact .btn{ padding: 14px 22px; }
+footer{ background-color: #000; color: var(--color-blanco); padding: 95px 20px; }
+.redes{ display: flex; gap: 25px; justify-content: center; align-items: center; }
+.redes a:hover{ color: var(--fondo-rosado); }
+@media(min-width:1600px){ .hero-texto{ min-height: 48vw; } }
+@media(max-width:991px){
+    h1{ font-size: 40px; } h2{ font-size: 30px; }
+    .hero-texto{ min-height: 570px; padding: 100px 30px 60px; }
+    .container{ padding-left: 30px; padding-right: 30px; }
+    .trendy-texto{ padding-right: 25px; }
+    .servicios-fila{ --bs-gutter-x: 25px; --bs-gutter-y: 25px; }
+    .producto-imagen{ padding-left: 30px; }
+    .producto-texto{ padding: 50px 30px; }
+    .testimonio,.testimonio-imagen{ height: 370px; }
+    .testimonio{ padding: 30px; }.testimonio blockquote{ font-size: 19px; }
+    .contacto-datos{ padding-left: 35px; }
+}
+@media(max-width:767px){
+    header{ padding: 16px 20px; }.logo{ width: 85px; }
+    #hero .hero-texto,#hero .hero-imagen{ width: 100%; }
+    .hero-texto{ min-height: auto; padding: 135px 30px 65px; }
+    .hero-imagen img{ max-height: 560px; object-position: center; }
+    #trendy,#services{ padding: 65px 0; }.trendy-texto{ margin-bottom: 40px; }
+    .servicio{ height: 320px; }
+    .producto-imagen{ padding: 35px 45px 0; }.producto-texto{ padding: 50px 30px 65px; }
+    .testimonio,.testimonio-imagen{ height: 350px; }
+    #testimonials>.row:last-child .testimonio{ order: -1; }
+    #contact{ padding: 65px 0; }.contacto-datos{ padding-left: 25px; margin-top: 60px; }
+    textarea{ height: 180px; }footer{ padding: 60px 20px; }
+}
+@media(prefers-reduced-motion:reduce){ html{ scroll-behavior: auto; }.servicio img{ transition: none; } }
